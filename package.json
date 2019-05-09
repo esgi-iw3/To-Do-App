@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/esgi-iw3/To-Do-App/issues"
   },
-  "homepage": "https://github.com/esgi-iw3/To-Do-App#readme"
+  "homepage": "https://github.com/esgi-iw3/To-Do-App#readme",
+  "dependencies": {
+    "idb": "^4.0.3"
+  },
+  "devDependencies": {
+    "workbox-cli": "^4.3.1"
+  }
 }
