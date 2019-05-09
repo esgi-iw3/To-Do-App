@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/esgi-iw3/To-Do-App#readme",
   "dependencies": {
-    "idb": "^4.0.3"
+    "idb": "^4.0.3",
+    "lit-element": "^2.1.0"
   },
   "devDependencies": {
     "workbox-cli": "^4.3.1"
