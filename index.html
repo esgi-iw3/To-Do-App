@@ -5,7 +5,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>To Do App PWA</title>
+	<!-- <link rel="stylesheet" href="./styles/main.css"> -->
 	<link rel="manifest" href="manifest.json">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		html {
+		  --app-text-color: #fff;
+		  --app-dark-color: #2a3443;
+		  --app-shade-color: #5e6673;
+		  --app-success-color: #f0f8f1;
+		  --app-warning-color: #fbeeec;
+		  --app-light-background: #f4f5f7;
+		  --app-spacing: 16px;
+		  margin: 0;
+		  padding: 0;
+		}
+		body {
+		  font-family: sans-serif;
+		  margin: 0;
+		  padding: 0;
+		  color: var(--app-dark-color);
+		  font-size: 18px;
+		  line-height: 1.5rem;
+		}
+		[hidden] {
+		  display: none;
+		}
+		a {
+		  color: var(--app-dark-color);
+		}
+		a:visited,
+		a:active {
+		  color: var(--app-shade-color);
+		}
+		header,
+		main,
+		nav {
+		  padding: var(--app-spacing);
+		}
+		nav {
+		  height: 3em;
+		}
+		header {
+		  background: var(--app-dark-color);
+		  color: var(--app-text-color);
+		}
+	</style>
+
+	<link rel="preload" href="/js/components/toDoCard/todo-card.css" as="style">
 
 	<script>
 		if('serviceWorker' in navigator) {
@@ -21,15 +71,17 @@
 </head>
 
 <body>
-	<header class="header">
-		<h1 class="header__title">Todo App</h1>
-	</header>
+	
+    <header><h1>Todo app</h1></header>
 
-	<main class="main">
+    <main></main>
 
-	</main>
+	<script type="module" src="/js/app.js" async></script>
+	<script nomodule>
+		const script = document.createElement('script');
+		script.href = '/js/components/toDoCard/todo-card.js';
+		document.head.appendChild(script);
+	</script>
 
-	<script src=”scripts/app.js” async></script>
 </body>
-
 </html>
