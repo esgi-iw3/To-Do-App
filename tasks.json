@@ -1,0 +1,10 @@
+{
+	"todo": [{
+		"text": "Test",
+		"checked": false
+	},
+	{
+		"text": "Task 3",
+		"checked": true
+	}]
+}
