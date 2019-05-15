@@ -15,6 +15,11 @@ export default class TodoInput extends LitElement {
         $input.value = '';
     }
 
+  handleClick()
+  {
+    this.shadowRoot.querySelector('input');
+}
+
     render(props) {
         return html`
         <style>

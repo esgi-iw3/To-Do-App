@@ -6,7 +6,6 @@ import TodoItem from "/js/components/TodoItem/todo-item.js";
 
 (async function(document) {
 
-	//let todoList = [];
 	const app = document.querySelector("#main");
 	const listPage = app.querySelector("#list-container");
 
@@ -15,9 +14,9 @@ import TodoItem from "/js/components/TodoItem/todo-item.js";
 		console.log(detail);
 	});
 
-	try{
+	/*try{
 
-		/*const data = await fetch('http://localhost:3000/todo');
+		const data = await fetch('http://localhost:3000/todo');
 		const json = await data.json();
 
 		const database = await openDB('app-store', 1, {
@@ -30,26 +29,23 @@ import TodoItem from "/js/components/TodoItem/todo-item.js";
 			await database.put('articles', json, 'articles');
 		}
 
-		//document.addEventListener('todo-input', ({detail}) => {
-
-
-		let input = this.shadowRoot.querySelector("#add");
+		let input = document.getElementById('add');
 		console.log(input);
 		input.addEventListener("submit", function(event){
-			json.push({text:document.querySelector("#add").value, checked:false});
+			json.push({text:input.value, checked:false});
 			database.put('articles', json, 'articles');
 			fetch('http://localhost:3000/todo', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({text:document.querySelector("#add").value, checked:false})
+				body: JSON.stringify({text:input.value, checked:false})
 			})
 		});
 		console.log(detail);
 	//});
 
-		const acticles = await database.get('articles', 'articles');
+		/*const acticles = await database.get('articles', 'articles');
 
 		const todo = acticles.map(item => {
 			const todoElement = new MyTodo();
@@ -59,10 +55,10 @@ import TodoItem from "/js/components/TodoItem/todo-item.js";
 
 			listPage.appendChild(todoElement);
 			return todoElement;
-		});*/
+		});
 
 	}catch(error) {
 		console.error(error);
-	}
+	}*/
 
 })(document);
